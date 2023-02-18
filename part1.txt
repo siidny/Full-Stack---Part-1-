@@ -745,7 +745,7 @@ const App = () => {
   const [vote, setVote] = useState([0, 0, 0, 0, 0, 0, 0]);
   const [topVoted, setTopVoted] = useState(0);
 
-  const voteChange = () => {
+  const voteForAnecdote = () => {
     let newVote = [...vote];
     newVote[selected] += 1;
     setVote(newVote);
@@ -776,7 +776,7 @@ const App = () => {
       <p>this anecdote has {vote[selected]} votes</p>
       <br />
       <div>
-        <button onClick={voteChange}>Vote for this anecdote</button>
+        <button onClick={voteForAnecdote}>Vote for this anecdote</button>
       </div>
       <div>
         <h1>Anecdote with the most votes</h1>
@@ -788,6 +788,7 @@ const App = () => {
 };
 
 export default App;
+
 
 
 
